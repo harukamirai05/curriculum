@@ -15,8 +15,13 @@
 <body>
     <div id="box"></div>
     <script>
-        let box = document.getElementById('box');
-        box.style.backgroundColor = 'red';
+        let box = document.getElementById("box");
+        box.addEventListener("mouseover",function(event) {
+        event.target.style.backgroundColor = 'red';
+        setTimeout(function () {
+        event.target.style.backgroundColor = "";
+      }, 500);
+    }, false);
     </script>
 </body>
 </html>
